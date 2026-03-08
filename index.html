@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <title>SSS GROUP Real Estate</title>
 
@@ -38,19 +37,21 @@ font-weight:500;
 }
 
 .hero{
-height:400px;
+height:420px;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-background:#0077ff;
+background:#0d6efd;
 color:white;
+text-align:center;
 }
 
 .hero input{
 padding:10px;
 border:none;
-width:200px;
+width:220px;
+margin-top:10px;
 }
 
 .hero button{
@@ -59,6 +60,7 @@ border:none;
 background:black;
 color:white;
 margin-top:10px;
+cursor:pointer;
 }
 
 .properties{
@@ -68,7 +70,7 @@ text-align:center;
 
 .cards{
 display:flex;
-gap:20px;
+gap:25px;
 justify-content:center;
 flex-wrap:wrap;
 }
@@ -76,9 +78,21 @@ flex-wrap:wrap;
 .card{
 background:white;
 padding:20px;
-width:250px;
+width:260px;
 border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
 }
 
 .about{
@@ -91,6 +105,27 @@ background:white;
 padding:60px;
 text-align:center;
 background:#eee;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-width:300px;
+margin:auto;
+}
+
+form input, form textarea{
+padding:10px;
+border:1px solid #ccc;
+}
+
+form button{
+padding:10px;
+background:#0d6efd;
+color:white;
+border:none;
+cursor:pointer;
 }
 
 footer{
@@ -110,9 +145,9 @@ padding:20px;
 
 <div class="logo">
 
-<svg width="50" height="50">
-<circle cx="25" cy="25" r="23" fill="#0077ff"/>
-<text x="50%" y="55%" text-anchor="middle" fill="white" font-size="18">SSS</text>
+<svg width="45" height="45">
+<circle cx="22" cy="22" r="20" fill="#0d6efd"/>
+<text x="50%" y="55%" text-anchor="middle" fill="white" font-size="14">SSS</text>
 </svg>
 
 SSS GROUP
@@ -133,6 +168,7 @@ SSS GROUP
 <section class="hero">
 
 <h1>Find Your Dream Property</h1>
+
 <p>Trusted Real Estate Company</p>
 
 <input id="search" placeholder="Search City">
@@ -148,21 +184,39 @@ SSS GROUP
 <div class="cards">
 
 <div class="card">
+
+<img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6">
+
 <h3>Luxury Villa</h3>
+
 <p>Location: Delhi</p>
+
 <p>Price: ₹90 Lakh</p>
+
 </div>
 
 <div class="card">
+
+<img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c">
+
 <h3>Modern Apartment</h3>
+
 <p>Location: Noida</p>
+
 <p>Price: ₹55 Lakh</p>
+
 </div>
 
 <div class="card">
+
+<img src="https://images.unsplash.com/photo-1507089947367-19c1da9775ae">
+
 <h3>Farm House</h3>
+
 <p>Location: Lucknow</p>
+
 <p>Price: ₹1.2 Crore</p>
+
 </div>
 
 </div>
@@ -179,9 +233,7 @@ SSS GROUP is a growing real estate company founded by
 
 <strong>
 
-Shivam Mishra  
-Shivanshu Mishra  
-Shubhanshu Mishra
+Shivam Mishra, Shivanshu Mishra, Shubhanshu Mishra
 
 </strong>
 
@@ -195,8 +247,19 @@ Our mission is to help people find the best residential and investment propertie
 
 <h2>Contact Us</h2>
 
-<p>Phone: YOUR_PHONE_NUMBER</p>
-<p>Email: YOUR_EMAIL@gmail.com</p>
+<p>Phone: 8577881494</p>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea placeholder="Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
 
 </section>
 
@@ -213,7 +276,7 @@ function searchProperty(){
 let city=document.getElementById("search").value;
 
 if(city=="")
-alert("Enter city name");
+alert("Please enter city name");
 
 else
 alert("Searching property in "+city);
