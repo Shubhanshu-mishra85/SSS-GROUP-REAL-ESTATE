@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>SSS GROUP Real Estate</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#f5f6fa;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:bold;
+font-size:22px;
+}
+
+nav a{
+margin:10px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.hero{
+height:400px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:#0077ff;
+color:white;
+}
+
+.hero input{
+padding:10px;
+border:none;
+width:200px;
+}
+
+.hero button{
+padding:10px 20px;
+border:none;
+background:black;
+color:white;
+margin-top:10px;
+}
+
+.properties{
+padding:60px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about{
+padding:60px;
+text-align:center;
+background:white;
+}
+
+.contact{
+padding:60px;
+text-align:center;
+background:#eee;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<svg width="50" height="50">
+<circle cx="25" cy="25" r="23" fill="#0077ff"/>
+<text x="50%" y="55%" text-anchor="middle" fill="white" font-size="18">SSS</text>
+</svg>
+
+SSS GROUP
+
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#properties">Properties</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Find Your Dream Property</h1>
+<p>Trusted Real Estate Company</p>
+
+<input id="search" placeholder="Search City">
+
+<button onclick="searchProperty()">Search</button>
+
+</section>
+
+<section id="properties" class="properties">
+
+<h2>Featured Properties</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Luxury Villa</h3>
+<p>Location: Delhi</p>
+<p>Price: ₹90 Lakh</p>
+</div>
+
+<div class="card">
+<h3>Modern Apartment</h3>
+<p>Location: Noida</p>
+<p>Price: ₹55 Lakh</p>
+</div>
+
+<div class="card">
+<h3>Farm House</h3>
+<p>Location: Lucknow</p>
+<p>Price: ₹1.2 Crore</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<h2>About SSS GROUP</h2>
+
+<p>
+
+SSS GROUP is a growing real estate company founded by
+
+<strong>
+
+Shivam Mishra  
+Shivanshu Mishra  
+Shubhanshu Mishra
+
+</strong>
+
+Our mission is to help people find the best residential and investment properties.
+
+</p>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<p>Phone: YOUR_PHONE_NUMBER</p>
+<p>Email: YOUR_EMAIL@gmail.com</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 SSS GROUP | All Rights Reserved</p>
+
+</footer>
+
+<script>
+
+function searchProperty(){
+
+let city=document.getElementById("search").value;
+
+if(city=="")
+alert("Enter city name");
+
+else
+alert("Searching property in "+city);
+
+}
+
+</script>
+
+</body>
+</html>
